@@ -1,8 +1,15 @@
 import {AuthConfig} from 'angular-oauth2-oidc';
 
+import { CardsHttpServiceMocksProvider } from '@backbase/data-ang/cards';
+import { createMocksInterceptor } from '@backbase/foundation-ang/data-http';
+
 export const environment = {
   production: false,
   apiRoot: '/api',
+  mocksProviders: [
+    createMocksInterceptor(),
+    CardsHttpServiceMocksProvider
+  ]
 };
 
 export const authConfig: AuthConfig = {

@@ -55,6 +55,7 @@ import { CARDS_BASE_PATH } from '@backbase/data-ang/cards';
             provide: CARDS_BASE_PATH,
             useValue: `${environment.apiRoot}/cards-presentation-service`,
         },
+        environment.mocksProviders
     ],
     bootstrap: [AppComponent],
 })
