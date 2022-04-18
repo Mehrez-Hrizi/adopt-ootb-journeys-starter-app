@@ -41,6 +41,18 @@
           </span>
         </a>
       </li>
+      <li class="bb-layout__horizontal-nav-item">
+        <a class="bb-layout__horizontal-nav-link"
+           routerLink="/cards-management"
+           routerLinkActive="bb-layout__horizontal-nav-link--active" #cardsManagementRouterLink="routerLinkActive"
+           [attr.aria-current]="cardsManagementRouterLink.isActive ? 'page' : undefined"
+           role="link"
+        >
+          <span class="bb-layout__horizontal-nav-item-description">
+            Cards Management
+          </span>
+        </a>
+      </li>
     </ul>
 
   </nav>

@@ -11,6 +11,8 @@ import {ACCESS_CONTROL_BASE_PATH} from '@backbase/data-ang/accesscontrol';
 import {AuthGuard} from './guards/auth.guard';
 import {ARRANGEMENT_MANAGER_BASE_PATH} from '@backbase/data-ang/arrangements';
 
+import { CARDS_BASE_PATH } from '@backbase/data-ang/cards';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -48,6 +50,10 @@ import {ARRANGEMENT_MANAGER_BASE_PATH} from '@backbase/data-ang/arrangements';
         {
             provide: ARRANGEMENT_MANAGER_BASE_PATH,
             useValue: environment.apiRoot + '/arrangement-manager',
+        },
+        {
+            provide: CARDS_BASE_PATH,
+            useValue: `${environment.apiRoot}/cards-presentation-service`,
         },
     ],
     bootstrap: [AppComponent],

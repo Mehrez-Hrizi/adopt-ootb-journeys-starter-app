@@ -18,6 +18,11 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
+    path: 'cards-management',
+    loadChildren: () => import('./cards-management/cards-management-bundle.module').then((m) => m.CardsManagementBundleModule),
+    canActivate: [AuthGuard],
+  },
+  {
     path: '**',
     redirectTo: 'login',
   },
